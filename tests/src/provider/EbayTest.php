@@ -58,7 +58,7 @@ class EbayTest extends \PHPUnit_Framework_TestCase
         $url = $this->provider->getAuthorizationUrl();
         $uri = parse_url($url);
 
-        $this->assertEquals('/oauth2/authorize', $uri['path']);
+        $this->assertEquals('/identity/v1/oauth2/token', $uri['path']);
     }
 
     public function testGetBaseAccessTokenUrl()
